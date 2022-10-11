@@ -1,7 +1,8 @@
-# This is a sample Python script.
+from tkinter import *
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+root = Tk()
 
-
-
+root.title('Calculate')
+root.geometry('800x600')
+root.wm_attributes('-alpha', 0.9)
+root.mainloop()
