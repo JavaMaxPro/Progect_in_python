@@ -22,6 +22,7 @@ class Calculator(QMainWindow):
         self.ui.btn_7.clicked.connect(lambda: self.add_digit('7'))
         self.ui.btn_8.clicked.connect(lambda: self.add_digit('8'))
         self.ui.btn_9.clicked.connect(lambda: self.add_digit('9'))
+        self.ui.btn_point.clicked.connect(lambda: self.add_point())
 
         # actiond
         self.ui.btn_clear.clicked.connect(lambda: self.clear_all())
@@ -40,6 +41,9 @@ class Calculator(QMainWindow):
     def clear_le(self) -> None:
         self.ui.le.setText('0')
 
+    def add_point(self) -> None:
+        if '.' not in self.ui.le.text() :
+            self.ui.le.setText(self.ui.le.text() + '.')
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
