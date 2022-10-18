@@ -18,6 +18,7 @@ class Calculator(QMainWindow):
         super(Calculator, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.entry_max_len = self.ui.le.maxLength()
 
         # digits
         self.ui.btn_0.clicked.connect(lambda: self.add_digit('0'))
@@ -120,6 +121,21 @@ class Calculator(QMainWindow):
         else:
             self.ui.le.setText('0')
 
+    def negate(self) -> None:
+        entry = self.ui.le.text()
+
+        if '-' not in entry:
+            if entry != '0':
+                entry = '-' + entry
+        else:
+            entry = entry[1:]
+
+        if len(entry) == self.entry_max_len + 1 and '-' in entry:
+            self.ui.le.setMaxLength(self.entry_max_len + 1)
+        else:
+            self.ui.le.setMaxLength(self.entry_max_len)
+
+        self.ui.le.setText(entry)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
