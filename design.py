@@ -13,9 +13,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QLayout,
-    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QGridLayout, QLayout, QLineEdit,
+    QMainWindow, QPushButton, QSizePolicy, QVBoxLayout,
+    QWidget)
 import files_rc
 
 class Ui_MainWindow(object):
@@ -57,25 +57,13 @@ class Ui_MainWindow(object):
         self.centralwidget.setContextMenuPolicy(Qt.CustomContextMenu)
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.labelTemp = QLabel(self.centralwidget)
-        self.labelTemp.setObjectName(u"labelTemp")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.labelTemp.sizePolicy().hasHeightForWidth())
-        self.labelTemp.setSizePolicy(sizePolicy1)
-        self.labelTemp.setStyleSheet(u"color: #888")
-        self.labelTemp.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-
-        self.verticalLayout.addWidget(self.labelTemp)
-
         self.le = QLineEdit(self.centralwidget)
         self.le.setObjectName(u"le")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Maximum)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.le.sizePolicy().hasHeightForWidth())
-        self.le.setSizePolicy(sizePolicy2)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Maximum)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.le.sizePolicy().hasHeightForWidth())
+        self.le.setSizePolicy(sizePolicy1)
         self.le.setStyleSheet(u"font-size: 40pt;\n"
 "border: none;")
         self.le.setMaxLength(10)
@@ -89,174 +77,174 @@ class Ui_MainWindow(object):
         self.gridLayout.setSizeConstraint(QLayout.SetMaximumSize)
         self.btn_CE = QPushButton(self.centralwidget)
         self.btn_CE.setObjectName(u"btn_CE")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Expanding)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.btn_CE.sizePolicy().hasHeightForWidth())
-        self.btn_CE.setSizePolicy(sizePolicy3)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Expanding)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.btn_CE.sizePolicy().hasHeightForWidth())
+        self.btn_CE.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_CE, 0, 1, 1, 1)
 
         self.btn_plus = QPushButton(self.centralwidget)
         self.btn_plus.setObjectName(u"btn_plus")
-        sizePolicy3.setHeightForWidth(self.btn_plus.sizePolicy().hasHeightForWidth())
-        self.btn_plus.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_plus.sizePolicy().hasHeightForWidth())
+        self.btn_plus.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_plus, 4, 3, 1, 1)
 
         self.btn_clear = QPushButton(self.centralwidget)
         self.btn_clear.setObjectName(u"btn_clear")
-        sizePolicy3.setHeightForWidth(self.btn_clear.sizePolicy().hasHeightForWidth())
-        self.btn_clear.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_clear.sizePolicy().hasHeightForWidth())
+        self.btn_clear.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_clear, 0, 0, 1, 1)
 
         self.btn_5 = QPushButton(self.centralwidget)
         self.btn_5.setObjectName(u"btn_5")
-        sizePolicy3.setHeightForWidth(self.btn_5.sizePolicy().hasHeightForWidth())
-        self.btn_5.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_5.sizePolicy().hasHeightForWidth())
+        self.btn_5.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_5, 3, 1, 1, 1)
 
         self.btn_1 = QPushButton(self.centralwidget)
         self.btn_1.setObjectName(u"btn_1")
-        sizePolicy3.setHeightForWidth(self.btn_1.sizePolicy().hasHeightForWidth())
-        self.btn_1.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_1.sizePolicy().hasHeightForWidth())
+        self.btn_1.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_1, 4, 0, 1, 1)
 
         self.btn_differ = QPushButton(self.centralwidget)
         self.btn_differ.setObjectName(u"btn_differ")
-        sizePolicy3.setHeightForWidth(self.btn_differ.sizePolicy().hasHeightForWidth())
-        self.btn_differ.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_differ.sizePolicy().hasHeightForWidth())
+        self.btn_differ.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_differ, 3, 3, 1, 1)
 
         self.btn_3 = QPushButton(self.centralwidget)
         self.btn_3.setObjectName(u"btn_3")
-        sizePolicy3.setHeightForWidth(self.btn_3.sizePolicy().hasHeightForWidth())
-        self.btn_3.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_3.sizePolicy().hasHeightForWidth())
+        self.btn_3.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_3, 4, 2, 1, 1)
 
         self.btn_6 = QPushButton(self.centralwidget)
         self.btn_6.setObjectName(u"btn_6")
-        sizePolicy3.setHeightForWidth(self.btn_6.sizePolicy().hasHeightForWidth())
-        self.btn_6.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_6.sizePolicy().hasHeightForWidth())
+        self.btn_6.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_6, 3, 2, 1, 1)
 
         self.btn_7 = QPushButton(self.centralwidget)
         self.btn_7.setObjectName(u"btn_7")
-        sizePolicy3.setHeightForWidth(self.btn_7.sizePolicy().hasHeightForWidth())
-        self.btn_7.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_7.sizePolicy().hasHeightForWidth())
+        self.btn_7.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_7, 2, 0, 1, 1)
 
         self.btn_multip = QPushButton(self.centralwidget)
         self.btn_multip.setObjectName(u"btn_multip")
-        sizePolicy3.setHeightForWidth(self.btn_multip.sizePolicy().hasHeightForWidth())
-        self.btn_multip.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_multip.sizePolicy().hasHeightForWidth())
+        self.btn_multip.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_multip, 2, 3, 1, 1)
 
         self.btn_2 = QPushButton(self.centralwidget)
         self.btn_2.setObjectName(u"btn_2")
-        sizePolicy3.setHeightForWidth(self.btn_2.sizePolicy().hasHeightForWidth())
-        self.btn_2.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_2.sizePolicy().hasHeightForWidth())
+        self.btn_2.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_2, 4, 1, 1, 1)
 
         self.btn_9 = QPushButton(self.centralwidget)
         self.btn_9.setObjectName(u"btn_9")
-        sizePolicy3.setHeightForWidth(self.btn_9.sizePolicy().hasHeightForWidth())
-        self.btn_9.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_9.sizePolicy().hasHeightForWidth())
+        self.btn_9.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_9, 2, 2, 1, 1)
 
         self.btn_div = QPushButton(self.centralwidget)
         self.btn_div.setObjectName(u"btn_div")
-        sizePolicy3.setHeightForWidth(self.btn_div.sizePolicy().hasHeightForWidth())
-        self.btn_div.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_div.sizePolicy().hasHeightForWidth())
+        self.btn_div.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_div, 0, 3, 1, 1)
 
         self.btn_4 = QPushButton(self.centralwidget)
         self.btn_4.setObjectName(u"btn_4")
-        sizePolicy3.setHeightForWidth(self.btn_4.sizePolicy().hasHeightForWidth())
-        self.btn_4.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_4.sizePolicy().hasHeightForWidth())
+        self.btn_4.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_4, 3, 0, 1, 1)
 
         self.btn_neg = QPushButton(self.centralwidget)
         self.btn_neg.setObjectName(u"btn_neg")
-        sizePolicy3.setHeightForWidth(self.btn_neg.sizePolicy().hasHeightForWidth())
-        self.btn_neg.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_neg.sizePolicy().hasHeightForWidth())
+        self.btn_neg.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_neg, 5, 0, 1, 1)
 
         self.btn_8 = QPushButton(self.centralwidget)
         self.btn_8.setObjectName(u"btn_8")
-        sizePolicy3.setHeightForWidth(self.btn_8.sizePolicy().hasHeightForWidth())
-        self.btn_8.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_8.sizePolicy().hasHeightForWidth())
+        self.btn_8.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_8, 2, 1, 1, 1)
 
         self.btn_backspace = QPushButton(self.centralwidget)
         self.btn_backspace.setObjectName(u"btn_backspace")
-        sizePolicy3.setHeightForWidth(self.btn_backspace.sizePolicy().hasHeightForWidth())
-        self.btn_backspace.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_backspace.sizePolicy().hasHeightForWidth())
+        self.btn_backspace.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_backspace, 0, 2, 1, 1)
 
         self.btn_0 = QPushButton(self.centralwidget)
         self.btn_0.setObjectName(u"btn_0")
-        sizePolicy3.setHeightForWidth(self.btn_0.sizePolicy().hasHeightForWidth())
-        self.btn_0.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_0.sizePolicy().hasHeightForWidth())
+        self.btn_0.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_0, 5, 1, 1, 1)
 
         self.btn_equals = QPushButton(self.centralwidget)
         self.btn_equals.setObjectName(u"btn_equals")
-        sizePolicy3.setHeightForWidth(self.btn_equals.sizePolicy().hasHeightForWidth())
-        self.btn_equals.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_equals.sizePolicy().hasHeightForWidth())
+        self.btn_equals.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_equals, 5, 3, 1, 1)
 
         self.btn_point = QPushButton(self.centralwidget)
         self.btn_point.setObjectName(u"btn_point")
-        sizePolicy3.setHeightForWidth(self.btn_point.sizePolicy().hasHeightForWidth())
-        self.btn_point.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_point.sizePolicy().hasHeightForWidth())
+        self.btn_point.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_point, 5, 2, 1, 1)
 
         self.btn_degree = QPushButton(self.centralwidget)
         self.btn_degree.setObjectName(u"btn_degree")
-        sizePolicy3.setHeightForWidth(self.btn_degree.sizePolicy().hasHeightForWidth())
-        self.btn_degree.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_degree.sizePolicy().hasHeightForWidth())
+        self.btn_degree.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_degree, 1, 3, 1, 1)
 
         self.btn_cos = QPushButton(self.centralwidget)
         self.btn_cos.setObjectName(u"btn_cos")
-        sizePolicy3.setHeightForWidth(self.btn_cos.sizePolicy().hasHeightForWidth())
-        self.btn_cos.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_cos.sizePolicy().hasHeightForWidth())
+        self.btn_cos.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_cos, 1, 2, 1, 1)
 
         self.btn_sin = QPushButton(self.centralwidget)
         self.btn_sin.setObjectName(u"btn_sin")
-        sizePolicy3.setHeightForWidth(self.btn_sin.sizePolicy().hasHeightForWidth())
-        self.btn_sin.setSizePolicy(sizePolicy3)
+        sizePolicy2.setHeightForWidth(self.btn_sin.sizePolicy().hasHeightForWidth())
+        self.btn_sin.setSizePolicy(sizePolicy2)
 
         self.gridLayout.addWidget(self.btn_sin, 1, 1, 1, 1)
 
-        self.btn_continuos = QPushButton(self.centralwidget)
-        self.btn_continuos.setObjectName(u"btn_continuos")
-        sizePolicy3.setHeightForWidth(self.btn_continuos.sizePolicy().hasHeightForWidth())
-        self.btn_continuos.setSizePolicy(sizePolicy3)
+        self.btn_rem_div = QPushButton(self.centralwidget)
+        self.btn_rem_div.setObjectName(u"btn_rem_div")
+        sizePolicy2.setHeightForWidth(self.btn_rem_div.sizePolicy().hasHeightForWidth())
+        self.btn_rem_div.setSizePolicy(sizePolicy2)
 
-        self.gridLayout.addWidget(self.btn_continuos, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.btn_rem_div, 1, 0, 1, 1)
 
 
         self.verticalLayout.addLayout(self.gridLayout)
@@ -270,7 +258,6 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Calculator", None))
-        self.labelTemp.setText("")
         self.le.setText(QCoreApplication.translate("MainWindow", u"0", None))
         self.btn_CE.setText(QCoreApplication.translate("MainWindow", u"CE", None))
 #if QT_CONFIG(shortcut)
@@ -346,6 +333,6 @@ class Ui_MainWindow(object):
         self.btn_degree.setText(QCoreApplication.translate("MainWindow", u"^", None))
         self.btn_cos.setText(QCoreApplication.translate("MainWindow", u"cos", None))
         self.btn_sin.setText(QCoreApplication.translate("MainWindow", u"sin", None))
-        self.btn_continuos.setText("")
+        self.btn_rem_div.setText(QCoreApplication.translate("MainWindow", u"%", None))
     # retranslateUi
 
