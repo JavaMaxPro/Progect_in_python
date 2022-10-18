@@ -10,8 +10,8 @@ result = None
 znak = None
 flag = False
 
-class Calculator(QMainWindow):
 
+class Calculator(QMainWindow):
 
     def __init__(self):
 
@@ -34,6 +34,7 @@ class Calculator(QMainWindow):
         # actions
         self.ui.btn_clear.clicked.connect(lambda: self.clear_all())
         self.ui.btn_CE.clicked.connect(lambda: self.clear_le())
+        self.ui.btn_backspace.clicked.connect(lambda: self.backspace())
         self.ui.btn_point.clicked.connect(lambda: self.add_point())
         self.ui.btn_cos.clicked.connect(lambda: self.btn_cosinus())
         self.ui.btn_sin.clicked.connect(lambda: self.btn_sinus())
@@ -64,7 +65,6 @@ class Calculator(QMainWindow):
     def clear_le(self) -> None:
         self.ui.le.setText('0')
 
-
     def add_point(self) -> None:
         if '.' not in self.ui.le.text():
             self.ui.le.setText(self.ui.le.text() + '.')
@@ -73,7 +73,6 @@ class Calculator(QMainWindow):
     def remove_trailing_zeros(num: str) -> str:
         n = str(float(num))
         return n[:-2] if n[-2:] == '.0' else n
-
 
     def btn_cosinus(self) -> None:
         result = float(self.ui.le.text()) * math.pi / 180
@@ -101,7 +100,7 @@ class Calculator(QMainWindow):
             znak = btn_text
             self.ui.le.setText('0')
             flag = True
-        elif znak and btn_text != '=' :
+        elif znak and btn_text != '=':
             result = float(OPERATIONS[znak](result, float(self.ui.le.text())))
             self.ui.le.setText(self.remove_trailing_zeros(str(result)))
             znak = btn_text
@@ -110,7 +109,16 @@ class Calculator(QMainWindow):
             self.ui.le.setText(self.remove_trailing_zeros(str(result)))
             znak = None
 
+    def backspace(self) -> None:
+        entry = self.ui.le.text()
 
+        if len(entry) != 1:
+            if len(entry) == 2 and '-' in entry:
+                self.ui.le.setText('0')
+            else:
+                self.ui.le.setText(entry[:-1])
+        else:
+            self.ui.le.setText('0')
 
 
 if __name__ == "__main__":
